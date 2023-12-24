@@ -1,7 +1,7 @@
 // layout
 .layout {
     margin: 0 auto;
-    max-width: calc(#{$pc-layout-width} - #{$pc-window-gap * 2});
+    max-width: calc(#{$pc-layout-width} + #{$pc-window-gap * 2});
     padding: 0 $pc-window-gap;
 
     @include mq_sp {
