@@ -1,24 +1,24 @@
 // layout
 .layout {
-    margin: 0 auto;
-    max-width: calc(#{$pc-layout-width} + #{$pc-window-gap * 2});
-    padding: 0 $pc-window-gap;
+	margin: 0 auto;
+	max-width: calc(#{$pc-layout-width} + #{$pc-window-gap * 2});
+	padding: 0 $pc-window-gap;
 
-    @include mq_sp {
-        margin: 0 auto;
-        padding: 0 $sp-window-gap;
-        width: auto;
-    }
-    
-    &-pc {
-        @include mq_sp {
-            display: none !important;
-        }
-    }
+	@include mq_sp {
+		margin: 0 auto;
+		padding: 0 $sp-window-gap;
+		max-width: auto;
+	}
 
-    &-sp {
-        @include mq_pc {
-            display: none !important;
-        }
-    }
+	&-pc {
+		@include mq_sp {
+			display: none !important;
+		}
+	}
+
+	&-sp {
+		@include mq_pc {
+			display: none !important;
+		}
+	}
 }

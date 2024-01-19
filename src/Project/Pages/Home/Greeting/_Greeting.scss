@@ -1,0 +1,26 @@
+@use "../../../Components/scss/mixin" as *;
+@use "../../../Components/scss/variables" as *;
+
+.greeting {
+	position: relative;
+	scroll-snap-align: start;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	&__time {
+		display: lblock;
+		text-align: center;
+		font-size: 6rem;
+		font-weight: 600;
+	}
+
+	&__txt {
+		display: block;
+		text-align: center;
+		font-size: 5rem;
+		font-weight: 600;
+	}
+}

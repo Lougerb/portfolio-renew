@@ -1,0 +1,111 @@
+@use "../../../Components/scss/mixin" as *;
+@use "../../../Components/scss/variables" as *;
+
+.works {
+	position: relative;
+	scroll-snap-align: start;
+	padding: 2rem 0;
+
+	&__container {
+		display: block;
+	}
+
+	&__list {
+		display: block;
+		scroll-snap-type: y mandatory;
+	}
+
+	&__card {
+		$cardSpace: 10rem;
+
+		display: block;
+		padding: $cardSpace 0;
+		scroll-snap-align: center;
+		scroll-snap-stop: always;
+
+		&:not(:first-child),
+		&:not(:last-child) {
+			padding: $cardSpace 0;
+		}
+
+		&:first-child {
+			padding-bottom: $cardSpace;
+		}
+
+		&:last-child {
+			padding-top: $cardSpace;
+		}
+		&__wrapper {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__perspective {
+			$pInit: 0;
+			transition: 0.3s ease;
+			transform-style: preserve-3d;
+			transform: perspective(500rem) rotateX(-#{$pInit}deg)
+				rotateY(#{$pInit}deg);
+		}
+
+		&__wrapper-perspective {
+			$wInit: 25;
+
+			transition: 0.3s ease;
+			transform-style: preserve-3d;
+			transform: perspective(500rem) rotateX(-#{$wInit}deg)
+				rotateY(#{$wInit}deg);
+
+			&:hover {
+				transform: perspective(500rem) rotateX(0deg) rotateY(0deg);
+			}
+		}
+
+		&__desktop {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&__img {
+				display: block;
+				width: 100rem;
+				height: 56.25rem;
+				background-color: #aaa;
+				position: relative;
+			}
+		}
+
+		&__mobile {
+			display: block;
+			position: absolute;
+			height: 48rem;
+			width: 27rem;
+			right: 2rem;
+			bottom: -5rem;
+
+			&__img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: #aaa;
+				box-shadow: -0.5rem 0.5rem 1rem rgba(#000, 0.5);
+				position: relative;
+
+				&::after {
+					content: "";
+					display: block;
+					width: 90%;
+					height: 90%;
+					background-color: red;
+					opacity: 0.7;
+					position: absolute;
+					inset: 0;
+					margin: auto;
+					transform: translateZ(5rem);
+				}
+			}
+		}
+	}
+}

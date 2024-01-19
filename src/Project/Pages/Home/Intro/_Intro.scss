@@ -1,211 +1,220 @@
-@use '../../../Components/scss/mixin' as *;
-@use '../../../Components/scss/variables' as *;
+@use "../../../Components/scss/mixin" as *;
+@use "../../../Components/scss/variables" as *;
 
 .intro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    min-height: 80rem;
-    position: relative;
-    z-index: 1;
+	$smallAniPosition: 20rem;
 
-    &__title {
-        text-align: center;
-        position: relative;
-        z-index: 2;
-        pointer-events: none;
-        user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: calc(100vh + $smallAniPosition);
+	min-height: 50rem;
+	position: relative;
+	z-index: 1;
+	scroll-snap-align: start;
+	overflow: hidden;
+	padding-bottom: $smallAniPosition;
 
-        &__t1 {
-            display: block;
-            font-size: 9.6rem;
-            font-weight: 600;
-        }
+	&__title {
+		text-align: center;
+		position: relative;
+		z-index: 2;
+		pointer-events: none;
+		user-select: none;
 
-        &__t2 {
-            display: block;
-            font-size: 4.8rem;
-            font-style: italic;
-        }
-    }
+		&__t1 {
+			display: block;
+			font-size: 9.6rem;
+			font-weight: 600;
+		}
 
-    &__animated-bg {
-        $aniDurationSmall: 30s;
-        $aniDurationBig: 90s;
+		&__t2 {
+			display: block;
+			font-size: 4.8rem;
+			font-style: italic;
+		}
+	}
 
-        display: block;
-        width: 40rem;
-        height: 40rem;
-        position: absolute;
-        z-index: 1;
-        // border: 1px solid #f00;
-        bottom: 0;
-        left: 0;
-        animation-name: loopcircle;
-        animation-duration: $aniDurationSmall;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        transform: rotate(0deg);
-        opacity: 0.5;
+	&__animated-bg {
+		$aniDurationSmall: 30s;
+		$aniDurationBig: 120s;
+		$aniFrame: 40rem;
+		$aniFrameBig: 60rem;
 
-        &.bigger-animated-bg {
-            bottom: auto;
-            left: auto;
-            top: 0;
-            right: 0;
-            width: 60rem;
-            height: 60rem;
-            animation-duration: $aniDurationBig;
-        }
+		display: block;
+		width: $aniFrame;
+		height: $aniFrame;
+		position: absolute;
+		z-index: 1;
+		bottom: $smallAniPosition;
+		left: 0;
+		animation-name: loopcircle;
+		animation-duration: $aniDurationSmall;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		transform: rotate(0deg);
+		opacity: 0.5;
 
-        &__inner {
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
+		&.bigger-animated-bg {
+			bottom: auto;
+			left: auto;
+			top: 0;
+			right: 0;
+			width: $aniFrameBig;
+			height: $aniFrameBig;
+			// width: calc($aniFrameBig * sqrt(2));
+			// height: calc($aniFrameBig * sqrt(2));
+			animation-duration: $aniDurationBig;
+		}
 
-        &__frame {
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            // border: 1px solid blue;
-            inset: 0;
-            margin: auto;
+		&__inner {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
 
-            &--1 {
-                transform: rotate(45deg);
-            }
+		&__frame {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			inset: 0;
+			margin: auto;
 
-            &--2 {
-                transform: rotate(90deg);
-            }
+			.bigger-animated-bg & {
+				width: $aniFrameBig;
+				height: $aniFrameBig;
+			}
 
-            &__items {
-                display: block;
-                width: 100%;
-                height: 100%;
-                position: relative;
+			&--1 {
+				transform: rotate(45deg);
+			}
 
-                &::before,
-                &::after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin: auto;
-                    background-color: #333;
-                    opacity: 0.2;
-                }
+			&--2 {
+				transform: rotate(0deg);
+			}
 
-                &::before {
-                    height: 1px;
-                    width: calc(40rem * sqrt(2) );
+			&__items {
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: relative;
 
-                    .bigger-animated-bg & {
-                        width: calc(60rem * sqrt(2) );
-                    }
-                }
+				// For lines
+				&::before,
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					margin: auto;
+					opacity: 0.2;
+				}
 
-                &::after {
-                    width: 1px;
-                    height: calc(40rem * sqrt(2) );
+				&::before {
+					height: 1px;
+					width: calc($aniFrame * sqrt(2));
 
-                    .bigger-animated-bg & {
-                        height: calc(60rem * sqrt(2) );
-                    }
-                }
+					.bigger-animated-bg & {
+						width: calc($aniFrameBig * sqrt(2));
+					}
+				}
 
-                &__item {
-                    $bWidth: 5rem;
-                    $bHeight: 5rem;
+				&::after {
+					width: 1px;
+					height: calc($aniFrame * sqrt(2));
 
-                    display: block;
-                    width: $bWidth;
-                    height: $bHeight;
-                    // border: 1px solid green;
-                    position: absolute;
-                    animation-name: loopcircle2;
-                    animation-duration: $aniDurationSmall;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: linear;
-                    animation-direction: reverse;
-                    // transform: scale(1);
-                    transition: 0.3s ease;
+					.bigger-animated-bg & {
+						height: calc($aniFrameBig * sqrt(2));
+					}
+				}
 
-                    .bigger-animated-bg & {
-                        width: 8rem;
-                        height: 8rem;
-                        animation-direction: reverse;
-                        animation-duration: $aniDurationBig;
-                    }
+				&__item {
+					$bWidth: 5rem;
+					$bHeight: 5rem;
 
-                    
-                    &__icon {
-                        display: block;
-                        height: 100%;
-                        width: 100%;
-                        transform: scale(1);
-                        transition: 0.3s ease;
-                        background-color: #333;
-                    }
-                    
-                    &:hover &__icon {
-                        transform: scale(2);
-                    }
+					display: block;
+					width: $bWidth;
+					height: $bHeight;
+					position: absolute;
+					animation-name: loopcircle2;
+					animation-duration: $aniDurationSmall;
+					animation-iteration-count: infinite;
+					animation-timing-function: linear;
+					animation-direction: reverse;
+					transform: scale(1);
+					transition: 0.3s ease;
 
-                    &--1 {
-                        top: calc($bWidth / -2);
-                        left: calc($bHeight / -2);
-                    }
+					.bigger-animated-bg & {
+						width: 8rem;
+						height: 8rem;
+						animation-direction: reverse;
+						animation-duration: $aniDurationBig;
+					}
 
-                    &--2 {
-                        top: calc($bWidth / -2);
-                        right: calc($bHeight / -2);
-                    }
+					&__icon {
+						display: block;
+						height: 100%;
+						width: 100%;
+						object-fit: contain;
+						transform: scale(1);
+						transition: 0.3s ease;
+					}
 
-                    &--3 {
-                        bottom: calc($bWidth / -2);
-                        left: calc($bHeight / -2);
-                    }
+					&:hover &__icon {
+						transform: scale(2);
+					}
 
-                    &--4 {
-                        bottom: calc($bWidth / -2);
-                        right: calc($bHeight / -2);
-                    }
-                }
-            }
+					&--1 {
+						top: calc($bWidth / -2);
+						left: calc($bHeight / -2);
+					}
 
-            &--2 &__items__item {
-                animation-name: loopcircle;
-            }
-        }
-        
-        @keyframes loopcircle {
-            0% {
-                transform: rotate(0deg);
-            }
+					&--2 {
+						top: calc($bWidth / -2);
+						right: calc($bHeight / -2);
+					}
 
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+					&--3 {
+						bottom: calc($bWidth / -2);
+						left: calc($bHeight / -2);
+					}
 
-        
-        @keyframes loopcircle2 {
-            0% {
-                transform: rotate(-45deg);
-            }
+					&--4 {
+						bottom: calc($bWidth / -2);
+						right: calc($bHeight / -2);
+					}
+				}
+			}
 
-            100% {
-                transform: rotate(315deg);
-            }
-        }
-    }
+			&--2 &__items__item {
+				animation-name: loopcircle;
+			}
+		}
+
+		@keyframes loopcircle {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes loopcircle2 {
+			0% {
+				transform: rotate(-45deg);
+			}
+
+			100% {
+				transform: rotate(315deg);
+			}
+		}
+	}
 }
