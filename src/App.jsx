@@ -1,6 +1,4 @@
 // Layout
-import Nav from "./Project/Layout/Nav/Nav";
-import Header from "./Project/Layout/Header/Header";
 import Footer from "./Project/Layout/Footer/Footer";
 // Content
 import Home from "./Project/Pages/Home/Home";
@@ -53,14 +51,11 @@ function App() {
 				</Helmet>
 			</HelmetProvider>
 
-			{/* <Header /> */}
-			{/* <Nav /> */}
-
 			<div className="main">
 				<RouterProvider router={router} />
 			</div>
 
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 }
