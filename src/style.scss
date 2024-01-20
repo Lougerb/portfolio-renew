@@ -1,11 +1,11 @@
 // foundation
-@import "./project/components/scss/foundation";
+@import "Project/components/scss/foundation";
 // components
 
 // layout
-@import "./project/layout/Header/Header";
-@import "./project/layout/Nav/Nav";
-@import "./project/layout/Footer/Footer";
+@import "Project/layout/Header/Header";
+@import "Project/layout/Nav/Nav";
+@import "Project/layout/Footer/Footer";
 
 // pages
-@import "./project/pages/index/index";
+@import "Project/pages/index/index";
