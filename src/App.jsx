@@ -1,11 +1,11 @@
 // Layout
 // import Footer from "./Project/Layout/Footer/Footer";
 // Content
-import Home from "Project/Pages/Home/Home";
-import NotFound from "Project/Pages/NotFound/NotFound";
+import Home from "./Project/Pages/Home/Home";
+import NotFound from "./Project/Pages/NotFound/NotFound";
 // css
 import "bootstrap/dist/css/bootstrap.min.css";
-import favico from "Project/Components/img/favico.png";
+import favico from "./Project/Components/img/favico.png";
 
 // Packages
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
