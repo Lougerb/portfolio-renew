@@ -1,5 +1,5 @@
 // Layout
-import Footer from "./Project/Layout/Footer/Footer";
+// import Footer from "./Project/Layout/Footer/Footer";
 // Content
 import Home from "./Project/Pages/Home/Home";
 import NotFound from "./Project/Pages/NotFound/NotFound";
@@ -55,7 +55,7 @@ function App() {
 				<RouterProvider router={router} />
 			</div>
 
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }
