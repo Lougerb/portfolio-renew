@@ -10,4 +10,5 @@ export default defineConfig({
 			plugins: [autoprefixer({})],
 		},
 	},
+	base: "/portfolio-renew/",
 });
