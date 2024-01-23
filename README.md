@@ -1,5 +1,9 @@
-# pre-requisite 
-- latest 
+# pre-requisite
+
+-   latest
+-   Live Sass Compiler
+
 # How to run
-- npm install
-- npm run dev
+
+-   npm install
+-   npm run dev

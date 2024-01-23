@@ -23,8 +23,6 @@ export default () => {
 				break;
 		}
 
-		console.log(greet);
-
 		setTime(dTime);
 	}, 1000);
 
