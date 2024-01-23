@@ -17,8 +17,8 @@ $sp-layout-width: 76.8rem;
 $sp-window-gap: 2rem;
 
 // Custom Variables for bootstrap
-@import "bootstrap/scss/_functions";
-@import "bootstrap/scss/_variables";
+@import "../../../../node_modules/bootstrap/scss/_functions";
+@import "../../../../node_modules/bootstrap/scss/_variables";
 
 $grid-breakpoints: (
 	xs: 0,
@@ -35,7 +35,7 @@ $grid-breakpoints: (
 	//default grid-breakpoint
 	xl: 1200px,
 	//default grid-breakpoint
-	xxl: 1400px //default grid-breakpoint,
+	xxl: 1400px //default grid-breakpoint,,,,,,,,,
 );
 
-@import "bootstrap/scss/bootstrap.scss";
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";

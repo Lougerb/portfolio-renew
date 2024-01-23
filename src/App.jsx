@@ -10,7 +10,7 @@ import favico from "./Project/Components/img/favico.png";
 // Packages
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import "./App.scss";
+import "./App.css";
 import "sanitize.css";
 
 const router = createBrowserRouter([

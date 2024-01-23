@@ -1,22 +1,22 @@
 // foundation
-@forward "./Project/Components/scss/foundation";
+@forward "Project/Components/scss/foundation";
 
 // components
-@use "./Project/Components/Input/Textbox/input-textbox";
-@use "./Project/Components/Input/Checkbox/input-checkbox";
-@use "./Project/Components/Input/Radio/input-radio";
+@use "Project/Components/Input/Textbox/input-textbox";
+@use "Project/Components/Input/Checkbox/input-checkbox";
+@use "Project/Components/Input/Radio/input-radio";
 // layout
-@import "./Project/Layout/Header/Header";
-@import "./Project/Layout/Footer/Footer";
-@import "./Project/Layout/Nav/Nav";
+@import "Project/Layout/Header/Header";
+@import "Project/Layout/Footer/Footer";
+@import "Project/Layout/Nav/Nav";
 
 // pages
-@import "./Project/Pages/Home/Home";
-@import "./Project/Pages/Home/Intro/Intro";
-@import "./Project/Pages/Home/Greeting/Greeting";
-@import "./Project/Pages/Home/About/About";
-@import "./Project/Pages/Home/Works/Works";
-@import "./Project/Pages/NotFound/NotFound";
+@import "Project/Pages/Home/Home";
+@import "Project/Pages/Home/Intro/Intro";
+@import "Project/Pages/Home/Greeting/Greeting";
+@import "Project/Pages/Home/About/About";
+@import "Project/Pages/Home/Works/Works";
+@import "Project/Pages/NotFound/NotFound";
 
 .App {
 	display: block;
