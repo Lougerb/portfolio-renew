@@ -15,7 +15,7 @@ import "sanitize.css";
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "/portfolio-renew/",
 		element: <Home />,
 	},
 	{
