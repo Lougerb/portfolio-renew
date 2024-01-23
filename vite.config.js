@@ -4,7 +4,6 @@ import autoprefixer from "autoprefixer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: "/portfolio-renew/",
 	plugins: [react()],
 	css: {
 		postcss: {
