@@ -7,6 +7,11 @@ import autoprefixer from "autoprefixer";
 export default defineConfig({
 	base: "/portfolio-renew/",
 	plugins: [react()],
+	resolve: {
+		alias: {
+			src: "/src",
+		},
+	},
 	css: {
 		postcss: {
 			plugins: [autoprefixer({})],

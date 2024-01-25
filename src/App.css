@@ -127654,6 +127654,9 @@ textarea.form-control-lg {
   scroll-snap-align: start;
   padding: 2rem 0;
 }
+.works__h2 {
+  position: sticky;
+}
 .works__container {
   display: block;
 }

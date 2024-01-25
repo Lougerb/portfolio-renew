@@ -6,6 +6,10 @@
 	scroll-snap-align: start;
 	padding: 2rem 0;
 
+	&__h2 {
+		position: sticky;
+	}
+
 	&__container {
 		display: block;
 	}
