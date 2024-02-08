@@ -1,5 +1,5 @@
 // Layout
-
+// import Footer from "./Project/Layout/Footer/Footer";
 // Content
 import Home from "./Project/Pages/Home/Home";
 import NotFound from "./Project/Pages/NotFound/NotFound";
