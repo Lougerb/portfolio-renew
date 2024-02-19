@@ -24,7 +24,7 @@ const router = createBrowserRouter([
 	},
 ]);
 
-const siteName = "Louein's Portfolio";
+const siteName = "Louein's big D Energy";
 const siteDesc = "I am a Front-End Developer";
 const siteKeywords = "Sample Keywords";
 const siteType = "Sample Type";

@@ -26,7 +26,7 @@ export default () => {
 						<div className="intro__animated-bg__frame__items">
 							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--1">
 								<img
-									src={Icon_html_tag}
+									src={Icon_android}
 									alt=""
 									className="intro__animated-bg__frame__items__item__icon"
 								/>

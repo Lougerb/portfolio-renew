@@ -2,19 +2,18 @@
 @use "../../../Components/scss/variables" as *;
 
 .intro {
-	$smallAniPosition: 20rem;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: calc(100vh + $smallAniPosition);
+	height: 100vh;
+	// height: calc(100vh + $smallAniPosition);
 	min-height: 50rem;
 	position: relative;
 	z-index: 1;
-	scroll-snap-align: start;
-	overflow: hidden;
-	padding-bottom: $smallAniPosition;
+	// scroll-snap-align: start;
+	// overflow: hidden;
+	// padding-bottom: $smallAniPosition;
 
 	&__title {
 		text-align: center;
@@ -47,7 +46,7 @@
 		height: $aniFrame;
 		position: absolute;
 		z-index: 1;
-		bottom: $smallAniPosition;
+		bottom: 0;
 		left: 0;
 		animation-name: loopcircle;
 		animation-duration: $aniDurationSmall;

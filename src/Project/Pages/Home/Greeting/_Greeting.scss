@@ -3,12 +3,11 @@
 
 .greeting {
 	position: relative;
-	scroll-snap-align: start;
-	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	height: 100vh;
 
 	&__time {
 		display: lblock;

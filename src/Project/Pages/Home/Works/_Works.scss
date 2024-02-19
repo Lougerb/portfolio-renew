@@ -3,7 +3,6 @@
 
 .works {
 	position: relative;
-	scroll-snap-align: start;
 	padding: 2rem 0;
 
 	&__h2 {
@@ -16,7 +15,6 @@
 
 	&__list {
 		display: block;
-		scroll-snap-type: y mandatory;
 	}
 
 	&__card {
@@ -24,8 +22,6 @@
 
 		display: block;
 		padding: $cardSpace 0;
-		scroll-snap-align: center;
-		scroll-snap-stop: always;
 
 		&:not(:first-child),
 		&:not(:last-child) {
