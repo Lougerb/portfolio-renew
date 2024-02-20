@@ -1,4 +1,5 @@
 import React, {useEffect, useMemo, useState}  from "react";
+import ParticlesComponent from "./Particles/Particles";
 import Icon_android from "../../../../assets/img/index/icon-android.svg";
 import Icon_css3 from "../../../../assets/img/index/icon-css3.svg";
 import Icon_sass from "../../../../assets/img/index/icon-sass.svg";
@@ -8,9 +9,10 @@ import Icon_php from "../../../../assets/img/index/icon-php.svg";
 import Icon_wordpress from "../../../../assets/img/index/icon-wordpress.svg";
 import Icon_github from "../../../../assets/img/index/icon-github.svg";
 import IntroIcon from "./Icon/IntroIcon";
+
+
 const imageBatch1 = [Icon_android, Icon_css3, Icon_sass, Icon_js];
 const imageBatch2 = [Icon_html_tag, Icon_php, Icon_wordpress, Icon_github];
-import ParticlesComponent from "./particles/Particles";
 
 export default () => {
 	const renderImages =(arr, altKey)=>{
