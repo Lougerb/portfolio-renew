@@ -15793,6 +15793,16 @@ h6,
   cursor: pointer;
 }
 
+.particles {
+  display: block;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -79236,6 +79246,8 @@ textarea.form-control-lg {
 }
 .home {
   background-color: #18141c;
+  position: relative;
+  z-index: 1;
 }
 .home__emptySpace {
   width: 100%;
@@ -111131,6 +111143,11 @@ textarea.form-control-lg {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #18141c), to(rgba(24, 20, 28, 0)));
+  background: linear-gradient(0deg, #18141c 80%, rgba(24, 20, 28, 0) 100%);
+}
+.greeting__wrapper {
+  color: #eee;
 }
 .greeting__time {
   display: lblock;

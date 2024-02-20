@@ -8,6 +8,11 @@
 	justify-content: center;
 	flex-direction: column;
 	height: 100vh;
+	background: linear-gradient(0deg, rgba(#18141c,1) 80%, rgba(#18141c,0) 100%);
+
+	&__wrapper {
+		color: #eee;
+	}
 
 	&__time {
 		display: lblock;

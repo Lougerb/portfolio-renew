@@ -1,5 +1,4 @@
 import React, {useEffect, useMemo, useState}  from "react";
-import ParticlesComponent from "./Particles/Particles"; 
 import Icon_android from "../../../../assets/img/index/icon-android.svg";
 import Icon_css3 from "../../../../assets/img/index/icon-css3.svg";
 import Icon_sass from "../../../../assets/img/index/icon-sass.svg";
@@ -33,7 +32,6 @@ export default () => {
 	return (
 		<>
 			<section className="home-section intro"  >
-				<ParticlesComponent/>
 				<div className="layout">
 					<h1 className="intro__title">
 						<span className="intro__title__t1">

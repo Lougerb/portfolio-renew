@@ -13,7 +13,7 @@ const ParticlesComponent = () => {
         await loadSlim(engine);
     },[]);
 
-    return <Particles init={particleInit} options={options}/>;
+    return <Particles init={particleInit} options={options} className="particles"/>;
 }
 
 export default ParticlesComponent;
