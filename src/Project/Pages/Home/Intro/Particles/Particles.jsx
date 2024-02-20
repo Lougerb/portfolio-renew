@@ -1,7 +1,5 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {loadSlim} from '@tsparticles/slim';
-import { loadAll } from "@tsparticles/all";
-import { loadFull } from "tsparticles";
 import { useCallback, useMemo, useEffect, useState } from 'react';
 import particleJSON from './particles.json';
 
