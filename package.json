@@ -13,6 +13,10 @@
 	},
 	"dependencies": {
 		"@splidejs/react-splide": "^0.7.12",
+		"@tsparticles/engine": "^3.2.2",
+		"@tsparticles/react": "^3.0.0",
+		"@tsparticles/slim": "^3.2.2",
+		"aos": "^2.3.4",
 		"autoprefixer": "^10.4.16",
 		"bootstrap": "^5.2.2",
 		"postcss": "^8.4.33",
@@ -22,22 +26,23 @@
 		"react-helmet": "^6.1.0",
 		"react-helmet-async": "^2.0.4",
 		"react-router-dom": "^6.4.2",
-		"sanitize.css": "^13.0.0"
+		"sanitize.css": "^13.0.0",
+		"tsparticles": "^3.2.2"
 	},
 	"devDependencies": {
-		"@types/react": "^18.2.15",
-		"@types/react-dom": "^18.2.7",
+		"@types/react": "^18.2.56",
+		"@types/react-dom": "^18.2.19",
 		"@vitejs/plugin-react": "^4.0.3",
 		"eslint": "^8.45.0",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.3",
 		"sass": "^1.65.1",
+		"typescript": "^5.3.3",
 		"vite": "^4.4.5"
 	},
 	"browserslist": [
 		"defaults and fully supports es6-module",
-		"maintained node versions",
-		"since 2010"
+		"maintained node versions"
 	]
 }

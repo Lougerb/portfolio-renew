@@ -14,6 +14,15 @@
 	// scroll-snap-align: start;
 	// overflow: hidden;
 	// padding-bottom: $smallAniPosition;
+	&-background {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1	;
+		inset: 0;
+		margin: auto;
+	}
 
 	&__title {
 		text-align: center;
@@ -21,6 +30,7 @@
 		z-index: 2;
 		pointer-events: none;
 		user-select: none;
+		color: #eee;
 
 		&__t1 {
 			display: block;
@@ -53,7 +63,7 @@
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 		transform: rotate(0deg);
-		opacity: 0.5;
+		opacity: 0.7;
 
 		&.bigger-animated-bg {
 			bottom: auto;
@@ -62,8 +72,6 @@
 			right: 0;
 			width: $aniFrameBig;
 			height: $aniFrameBig;
-			// width: calc($aniFrameBig * sqrt(2));
-			// height: calc($aniFrameBig * sqrt(2));
 			animation-duration: $aniDurationBig;
 		}
 
@@ -160,7 +168,10 @@
 						display: block;
 						height: 100%;
 						width: 100%;
-						object-fit: contain;
+						object-fit: none;
+						mask-size: 100%;
+						mask-repeat: no-repeat;
+						background-color: #0FF;
 						transform: scale(1);
 						transition: 0.3s ease;
 					}

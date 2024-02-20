@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default () => {
 	const [time, setTime] = useState("00:00:00");
 	const [greet, setGreet] = useState("Good morning!");
+
+	useEffect(() => {
+        AOS.init();
+      }, []);	
 
 	// update
 	setInterval(() => {
@@ -28,7 +35,7 @@ export default () => {
 
 	return (
 		<>
-			<section className="home-section greeting">
+			<section className="home-section greeting"  data-aos="fade-up">
 				<div className="greeting">
 					<p className="greeting__time">It's {time}</p>
 					<p className="greeting__txt">{greet}</p>

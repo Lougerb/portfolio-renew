@@ -1,3 +1,4 @@
+import React, {useEffect, useMemo, useState}  from "react";
 import Icon_android from "../../../../assets/img/index/icon-android.svg";
 import Icon_css3 from "../../../../assets/img/index/icon-css3.svg";
 import Icon_sass from "../../../../assets/img/index/icon-sass.svg";
@@ -6,151 +7,63 @@ import Icon_html_tag from "../../../../assets/img/index/icon-html-tag.svg";
 import Icon_php from "../../../../assets/img/index/icon-php.svg";
 import Icon_wordpress from "../../../../assets/img/index/icon-wordpress.svg";
 import Icon_github from "../../../../assets/img/index/icon-github.svg";
+import IntroIcon from "./Icon/IntroIcon";
+const imageBatch1 = [Icon_android, Icon_css3, Icon_sass, Icon_js];
+const imageBatch2 = [Icon_html_tag, Icon_php, Icon_wordpress, Icon_github];
+import ParticlesComponent from "./particles/Particles";
 
 export default () => {
+	const renderImages =(arr, altKey)=>{
+		return arr.map((image, index)=>{
+			return (
+			<React.Fragment key={altKey+index}>
+				<IntroIcon image={image} id={index}/>
+			</React.Fragment>
+			);
+		})
+	};
+
+	useEffect(()=>{
+		// 
+	},[])
+
+
 	return (
 		<>
-			<section className="home-section intro">
+			<section className="home-section intro"  >
+				<ParticlesComponent/>
 				<div className="layout">
 					<h1 className="intro__title">
 						<span className="intro__title__t1">
-							LOUEIN GERALD BALING
+							JOE MAMA
 						</span>
 						<span className="intro__title__t2">
-							FRONT END DEVELOPER
+							TAGA LUTO
 						</span>
 					</h1>
 				</div>
 				<div className="intro__animated-bg">
 					<div className="intro__animated-bg__frame intro__animated-bg__frame--1">
-						<div className="intro__animated-bg__frame__items">
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--1">
-								<img
-									src={Icon_android}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--2">
-								<img
-									src={Icon_css3}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--3">
-								<img
-									src={Icon_sass}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--4">
-								<img
-									src={Icon_js}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-						</div>
+						<ul className="intro__animated-bg__frame__items">
+							{renderImages(imageBatch1, 10)}
+						</ul>
 					</div>
 					<div className="intro__animated-bg__frame intro__animated-bg__frame--2">
-						<div className="intro__animated-bg__frame__items">
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--1">
-								<img
-									src={Icon_html_tag}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--2">
-								<img
-									src={Icon_php}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--3">
-								<img
-									src={Icon_wordpress}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--4">
-								<img
-									src={Icon_github}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-						</div>
+						<ul className="intro__animated-bg__frame__items">
+							{renderImages(imageBatch2, 20)}
+						</ul>
 					</div>
 				</div>
 				<div className="intro__animated-bg bigger-animated-bg">
 					<div className="intro__animated-bg__frame intro__animated-bg__frame--1">
-						<div className="intro__animated-bg__frame__items">
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--1">
-								<img
-									src={Icon_android}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--2">
-								<img
-									src={Icon_css3}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--3">
-								<img
-									src={Icon_sass}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--4">
-								<img
-									src={Icon_js}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-						</div>
+						<ul className="intro__animated-bg__frame__items">
+							{renderImages(imageBatch1, 30)}
+						</ul>
 					</div>
 					<div className="intro__animated-bg__frame intro__animated-bg__frame--2">
-						<div className="intro__animated-bg__frame__items">
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--1">
-								<img
-									src={Icon_html_tag}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--2">
-								<img
-									src={Icon_php}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--3">
-								<img
-									src={Icon_wordpress}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-							<div className="intro__animated-bg__frame__items__item intro__animated-bg__frame__items__item--4">
-								<img
-									src={Icon_github}
-									alt=""
-									className="intro__animated-bg__frame__items__item__icon"
-								/>
-							</div>
-						</div>
+						<ul className="intro__animated-bg__frame__items">
+							{renderImages(imageBatch2, 40)}
+						</ul>
 					</div>
 				</div>
 			</section>
