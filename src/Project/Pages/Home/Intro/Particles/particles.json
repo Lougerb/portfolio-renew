@@ -1,11 +1,14 @@
 {
   "autoPlay": true,
   "background": {
+    "color": {
+      "value": "#ffffff"
+    },
     "image": "",
     "position": "",
     "repeat": "",
     "size": "",
-    "opacity": 1
+    "opacity": 0
   },
   "backgroundMask": {
     "composite": "destination-out",
@@ -13,7 +16,7 @@
       "color": {
         "value": "#fff"
       },
-      "opacity": 1
+      "opacity": 0
     },
     "enable": false
   },
@@ -26,7 +29,7 @@
   },
   "detectRetina": true,
   "duration": 0,
-  "fpsLimit": 30,
+  "fpsLimit": 120,
   "interactivity": {
     "detectsOn": "window",
     "events": {
@@ -42,7 +45,7 @@
       },
       "onHover": {
         "enable": true,
-        "mode": "attract",
+        "mode": "grab",
         "parallax": {
           "enable": false,
           "force": 2,
@@ -206,18 +209,18 @@
       },
       "enable": false,
       "maxSpeed": 50,
-      "mode": "grab",
+      "mode": "bounce",
       "overlap": {
         "enable": true,
         "retries": 0
       }
     },
     "color": {
-      "value": "#0ff",
+      "value": "#fff",
       "animation": {
         "h": {
           "count": 0,
-          "enable": false,
+          "enable": true,
           "speed": 1,
           "decay": 0,
           "delay": 0,
@@ -296,7 +299,7 @@
         "right": "out",
         "top": "out"
       },
-      "random": false,
+      "random": true,
       "size": false,
       "speed": 1,
       "spin": {
@@ -377,8 +380,39 @@
       }
     },
     "stroke": {
-      "width": 0,
-      "opacity": 0.46
+      "width": 1,
+      "color": {
+        "value": "#0ff",
+        "animation": {
+          "h": {
+            "count": 0,
+            "enable": true,
+            "speed": 1,
+            "decay": 0,
+            "delay": 0,
+            "sync": true,
+            "offset": 0
+          },
+          "s": {
+            "count": 0,
+            "enable": false,
+            "speed": 1,
+            "decay": 0,
+            "delay": 0,
+            "sync": true,
+            "offset": 0
+          },
+          "l": {
+            "count": 0,
+            "enable": false,
+            "speed": 1,
+            "decay": 0,
+            "delay": 0,
+            "sync": true,
+            "offset": 0
+          }
+        }
+      }
     },
     "zIndex": {
       "value": 0,
@@ -519,8 +553,8 @@
       "speed": 1
     }
   },
-  "pauseOnBlur": false,
-  "pauseOnOutsideViewport": false,
+  "pauseOnBlur": true,
+  "pauseOnOutsideViewport": true,
   "responsive": [],
   "smooth": false,
   "style": {},
