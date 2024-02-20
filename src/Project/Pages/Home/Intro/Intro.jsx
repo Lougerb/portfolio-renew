@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo, useState}  from "react";
-import ParticlesComponent from "./Particles/Particles";
+import ParticlesComponent from "./Particles/Particles"; 
 import Icon_android from "../../../../assets/img/index/icon-android.svg";
 import Icon_css3 from "../../../../assets/img/index/icon-css3.svg";
 import Icon_sass from "../../../../assets/img/index/icon-sass.svg";

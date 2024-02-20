@@ -13,9 +13,6 @@
 	},
 	"dependencies": {
 		"@splidejs/react-splide": "^0.7.12",
-		"@tsparticles/engine": "^3.2.2",
-		"@tsparticles/react": "^3.0.0",
-		"@tsparticles/slim": "^3.2.2",
 		"aos": "^2.3.4",
 		"autoprefixer": "^10.4.16",
 		"bootstrap": "^5.2.2",
@@ -26,8 +23,10 @@
 		"react-helmet": "^6.1.0",
 		"react-helmet-async": "^2.0.4",
 		"react-router-dom": "^6.4.2",
+		"react-tsparticles": "^2.12.2",
 		"sanitize.css": "^13.0.0",
-		"tsparticles": "^3.2.2"
+		"tsparticles": "^3.2.2",
+		"tsparticles-slim": "^2.12.0"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.56",
