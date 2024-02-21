@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import AnimationBG from "./AnimationBG";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -36,7 +37,8 @@ export default () => {
 	return (
 		<>
 			<section className="home-section greeting">
-				<div className="greeting__wrapper"   data-aos="fade-up">
+				<AnimationBG/>
+				<div className="greeting__wrapper" data-aos="fade-up">
 					<p className="greeting__time">It's {time}</p>
 					<p className="greeting__txt">{greet}</p>
 				</div>

@@ -17,4 +17,5 @@ export default defineConfig({
 			plugins: [autoprefixer({})],
 		},
 	},
+	assetsInclude: ["**/*.riv"],
 });
