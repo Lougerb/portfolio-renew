@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 export default () => {
 	const [time, setTime] = useState("00:00:00");
 	const [greet, setGreet] = useState("Good morning!");
+	const [hour, setHour] = useState('morning');
 
 	useEffect(() => {
         AOS.init();
@@ -22,12 +23,15 @@ export default () => {
 		switch (true) {
 			case currentHour < 12:
 				setGreet("Good Morning!");
+				setHour('morning');
 				break;
 			case 11 < currentHour && currentHour < 18:
 				setGreet("Good Afternoon!");
+				setHour('afternoon');
 				break;
 			case 17 < currentHour && currentHour < 24:
 				setGreet("Good Evening!");
+				setHour('evening');
 				break;
 		}
 
