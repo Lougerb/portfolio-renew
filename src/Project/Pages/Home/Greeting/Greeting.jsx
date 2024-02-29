@@ -6,14 +6,13 @@ import 'aos/dist/aos.css';
 export default () => {
 	const [time, setTime] = useState("00:00:00");
 	const [greet, setGreet] = useState("Good morning!");
-	const [hour, setHour] = useState('morning');
+	const [hour, setHour] = useState('');
 
 	useEffect(() => {
         AOS.init();
-      }, []);	
 
-	// update
-	setInterval(() => {
+		// update
+
 		const dTime = new Date().toLocaleTimeString([], {
 			hour: "2-digit",
 			minute: "2-digit",
@@ -34,14 +33,16 @@ export default () => {
 				setHour('evening');
 				break;
 		}
+		setInterval(() => {
+			setTime(dTime);
+		}, 1000);
+      }, []);	
 
-		setTime(dTime);
-	}, 1000);
 
 	return (
 		<>
 			<section className="home-section greeting">
-				<AnimationBG/>
+				<AnimationBG currentTime={hour}/>
 				<div className="greeting__wrapper" data-aos="fade-up">
 					<p className="greeting__time">It's {time}</p>
 					<p className="greeting__txt">{greet}</p>

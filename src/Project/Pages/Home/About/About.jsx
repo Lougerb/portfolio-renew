@@ -5,12 +5,12 @@ export default () => {
 	return (
 		<>
 			<section className="home-section about">
-				<h2 className="head2 about-h2">ABOUT ME</h2>
+				<h2 className="head2 about-h2">Lorem</h2>
 				<div className="about__list">
 					<div className="about__section about__section--1">
 						<p className="about__entry">
 							<span className="about__entry__txt1">
-								Hi! I'm Gerald, nice to meet you!
+								Hi! I'm Lorem, nice to meet you!
 							</span>
 							<span className="about__entry__txt2">
 								I am a Front end developer who love making
