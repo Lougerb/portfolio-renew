@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import Rive, { useRive, useStateMachineInput, Layout, Fit, Alignment, RiveRef } from "@rive-app/react-canvas";
 // import rive from '@rive-app/react-canvas';
-import canvas from "../../../../assets/rive/greetinghour.riv";
+import canvas from "../../../../assets/rive/greetinghour.riv?url";
 
 export default ({currentTime})=> {
     
