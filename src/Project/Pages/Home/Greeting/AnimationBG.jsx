@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import Rive, { useRive, useStateMachineInput, Layout, Fit, Alignment, RiveRef } from "@rive-app/react-canvas";
 // import rive from '@rive-app/react-canvas';
-import canvas from '../../../../assets/rive/GreetingHour.riv';
+import canvas from '../../../../assets/rive/greetinghour.riv';
 
 export default ({currentTime})=> {
     
@@ -44,7 +44,7 @@ export default ({currentTime})=> {
     
 
     return (<>
-                <div className={`greeting__bg`} ref={refCanvas}>
+                <div className={`greeting__bg`} ref={refCanvas} data-attribute="Image by pikisuperstar on Freepik">
                     <RiveComponent />
                 </div> 
         </>);

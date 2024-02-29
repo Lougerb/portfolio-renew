@@ -14,10 +14,10 @@ function Home() {
 			<Greeting />
 
 			{/* ABOUT */}
-			<About />
+			{/* <About /> */}
 
 			{/* WORKS AND PROJECTS */}
-			<Works />
+			{/* <Works /> */}
 
 			{/* EXPERIENCE */}
 
