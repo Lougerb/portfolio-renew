@@ -15,6 +15,7 @@ function Home() {
 
 			{/* ABOUT */}
 			{/* <About /> */}
+			
 
 			{/* WORKS AND PROJECTS */}
 			{/* <Works /> */}
